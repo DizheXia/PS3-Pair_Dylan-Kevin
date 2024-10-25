@@ -18,25 +18,6 @@ include-before-body:
     }
 ---
 
-#First round
-#1.
-```{bash}
-cd "D:\Github\git\PS3-Pair_Dylan-Kevin"
-git checkout -b merge_kevin
-git add ps3_pair-1.qmd
-git commit -m "Replace 'Dema Therese' with Kevin Yao in ps3_pair-1.qmd"
-git push origin merge_conflict_kevin
-```
-
-#Second round
-#1.(a)
-```{bash}
-git checkout describe
-git add ps3_pair-1.qmd
-git commit -m "Modify preview_data function to return head and describe results"
-git push origin describe
-```
-
 ```{python}
 import pandas as pd
 import numpy as np
