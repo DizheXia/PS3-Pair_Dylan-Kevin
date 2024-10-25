@@ -1,6 +1,9 @@
 ---
 title: "30538 Problem Set 3: git pair"
+merge_conflict_Dizhe_Xia
 author: "Dizhe Xia"
+author: "Kevin Yao"
+main
 format: 
   pdf:
     keep-tex: true
