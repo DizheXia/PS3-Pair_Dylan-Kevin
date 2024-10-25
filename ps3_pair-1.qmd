@@ -1,6 +1,10 @@
 ---
 title: "30538 Problem Set 3: git pair"
+histogram
+merge_conflict_Dizhe_Xia
+author: "Dizhe Xia"
 author: "Kevin Yao"
+main
 format: 
   pdf:
     keep-tex: true
@@ -21,11 +25,18 @@ include-before-body:
 ```{python}
 import pandas as pd
 import numpy as np
+import altair as alt
+from IPython.display import display
 
+# Set the seed for reproducibility
 np.random.seed(42)
 data = pd.DataFrame(np.random.rand(100), columns=['Random Numbers'])
 
+# Enable Altair embedded rendering for HTML export
+alt.renderers.enable('default')
+
 def preview_data(df):
+describe
     head_data = df.head()
     describe_data = df.describe()
     return [head_data, describe_data]
@@ -39,3 +50,29 @@ print(result[0])
 print("\nDescriptive Statistics:")
 print(result[1])
 ```
+
+    # Get the head of the DataFrame
+    df_head = df.head()
+    
+    # Create a histogram using Altair
+    chart = alt.Chart(df).mark_bar().encode(
+        alt.X('Random Numbers', bin=True),
+        y='count()'
+    ).properties(
+        width=300,
+        height=200,
+        title='Histogram of Random Numbers'
+    )
+    
+    # Return both the head and the Altair plot
+    return df_head, chart
+
+# Preview the data
+df_head, chart = preview_data(data)
+
+# Display the DataFrame head and the chart
+display(df_head) 
+chart
+
+```
+main
